@@ -1,0 +1,129 @@
+/* General Layout */
+.skills-container {
+    padding: 30px;
+  }
+  
+  /* Header */
+  .skills-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .skills-header h1 {
+    font-size: 32px;  /* Increased */
+    font-weight: bold;
+  }
+  
+  .skills-header p {
+    font-size: 18px;  /* Increased */
+    color: #666;
+  }
+  
+  /* Layout */
+  .skills-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;  /* Increased Sidebar Width */
+    gap: 25px;
+  }
+  
+  /* Filters Sidebar */
+  .filters-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filters-card h3 {
+    font-size: 18px;  /* Increased */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .filters-card input,
+  .filters-card select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;  /* Increased */
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .icon-btn {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .apply-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;  /* Increased */
+    cursor: pointer;
+  }
+  
+  .apply-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  /* Skill Card */
+  .skill-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card h3 {
+    font-size: 20px;  /* Increased */
+    font-weight: bold;
+  }
+  
+  .skill-card p {
+    font-size: 18px;  /* Increased */
+    color: #555;
+  }
+  
+  /* Load More */
+  .load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  
+  .outline-btn {
+    padding: 12px 18px;
+    border: 2px solid #007bff;
+    background: transparent;
+    color: #007bff;
+    border-radius: 8px;
+    font-size: 18px;  /* Increased */
+    cursor: pointer;
+  }
+  
+  .outline-btn:hover {
+    background: #007bff;
+    color: white;
+  }
+  
