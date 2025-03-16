@@ -17,7 +17,7 @@ export default function ProfilePage() {
       return;
     }
 
-    axios.get(`http://localhost:5000/api/auth/profile/${userId}`)
+    axios.get(`http://e-bartertrade.onrender.com/api/auth/profile/${userId}`)
       .then((res) => setUser(res.data))
       .catch((err) => {
         console.error("Error fetching user:", err);

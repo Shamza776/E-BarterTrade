@@ -25,7 +25,7 @@ export default function NewSkillPage() {
     setIsLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/skills/new", {
+      await axios.post("http://e-bartertrade.onrender.com/api/skills/new", {
         ...skill,
         userId, // Attach the logged-in user's ID
       });

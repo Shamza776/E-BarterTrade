@@ -17,7 +17,7 @@ export default function EditSkillPage() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/skills/${skillId}`)
+    axios.get(`http://e-bartertrade.onrender.com/api/skills/${skillId}`)
       .then((res) => setSkill(res.data))
       .catch((err) => console.error("Error fetching skill:", err));
   }, [skillId]);
@@ -31,7 +31,7 @@ export default function EditSkillPage() {
     setIsLoading(true);
 
     try {
-      await axios.put(`http://localhost:5000/api/skills/${skillId}`, skill);
+      await axios.put(`http://e-bartertrade.onrender.com/api/skills/${skillId}`, skill);
       alert("Skill updated successfully!");
       navigate("/dashboard");
     } catch (err) {

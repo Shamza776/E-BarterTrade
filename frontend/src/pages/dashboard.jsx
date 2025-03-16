@@ -15,7 +15,7 @@ export default function DashboardPage() {
   }, []);
 
   const fetchSkills = () => {
-    axios.get(`http://localhost:5000/api/skills/${userId}`)
+    axios.get(`https://e-bartertrade.onrender.com/api/skills/${userId}`)
       .then((res) => {
         setSkills(res.data);
         setLoading(false);
@@ -32,7 +32,7 @@ export default function DashboardPage() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/skills/${skillId}`);
+      await axios.delete(`http://e-bartertrade.onrender.com/api/skills/${skillId}`);
       setSkills(skills.filter(skill => skill._id !== skillId)); // Remove skill from state
     } catch (err) {
       console.error("Error deleting skill:", err);

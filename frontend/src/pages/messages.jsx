@@ -5,7 +5,7 @@ import axios from "axios";
 import { Search, PlusCircle } from "lucide-react";
 import "./messages.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("http://e-bartertrade.onrender.com");
 
 export default function MessagesPage() {
   const { userId } = useParams();
@@ -75,7 +75,7 @@ export default function MessagesPage() {
   const fetchConversations = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/messages/conversations/${currentUserId}`
+        `http://e-bartertrade.onrender.com/api/messages/conversations/${currentUserId}`
       );
       console.log("Conversations:", res.data);
       setConversations(res.data);
@@ -89,7 +89,7 @@ export default function MessagesPage() {
   // Fetch user details
   const fetchUserDetails = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/${id}`);
+      const res = await axios.get(`http://e-bartertrade.onrender.com/api/users/${id}`);
       setActiveUser(res.data);
     } catch (error) {
       console.error("Error fetching user details:", error);
@@ -99,7 +99,7 @@ export default function MessagesPage() {
   // Fetch all users for new conversation
   const fetchAllUsers = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users`);
+      const res = await axios.get(`http://e-bartertrade.onrender.com/api/users`);
       // Filter out current user
       const filteredUsers = res.data.filter(user => user._id !== currentUserId);
       setAllUsers(filteredUsers);
@@ -115,7 +115,7 @@ export default function MessagesPage() {
       console.log(`Fetching messages between ${currentUserId} and ${otherUserId}`);
 
       const res = await axios.get(
-        `http://localhost:5000/api/messages/${currentUserId}/${otherUserId}`
+        `http://e-bartertrade.onrender.com/api/messages/${currentUserId}/${otherUserId}`
       );
 
       console.log("Messages received:", res.data);
@@ -149,7 +149,7 @@ export default function MessagesPage() {
       socket.emit("send_message", newMessage);
       
       // Save to database
-      await axios.post("http://localhost:5000/api/messages", newMessage);
+      await axios.post("http://e-bartertrade.onrender.com/api/messages", newMessage);
       
       // Update UI
       setMessages([...messages, newMessage]);

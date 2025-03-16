@@ -25,7 +25,7 @@ export default function SignUpPage() {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000/api/auth/signup", user);
+      await axios.post("http://e-bartertrade.onrender.com/api/auth/signup", user);
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed. Please try again.");

@@ -24,7 +24,7 @@ export default function LoginPage() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", user);
+      const response = await axios.post("http://e-bartertrade.onrender.com/api/auth/login", user);
       
       // Store token in local storage
       localStorage.setItem("token", response.data.token);
