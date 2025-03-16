@@ -28,6 +28,7 @@ function App() {
         <Route path="/edit-skill/:skillId" element={<EditSkillPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/messages" element={<ProtectedRoute><MessagesPage /></ProtectedRoute>} />
+        <Route path="/messages/:userId" element={<ProtectedRoute><MessagesPage /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
       </Routes>
       </div>
